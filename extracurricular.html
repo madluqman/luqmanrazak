@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Extracurricular - Luqman</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #e0f2f1;
+      color: #333;
+    }
+
+    header {
+      background-color: #004d40;
+      color: #fbc02d;
+      padding: 1.5em 0;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    nav {
+      margin-top: 1em;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 1em;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #fbc02d;
+    }
+
+    section {
+      padding: 2em;
+      text-align: center;
+    }
+
+    .slider-section-title {
+    text-align: center;
+    font-size: 1.8em;
+    color: #ffd700;
+    margin-bottom: 10px;
+    font-weight: bold;
+    }
+
+    .slide-content {
+      width: 90%;
+      max-width: 700px;
+      aspect-ratio: 4 / 5;
+      margin: 40px auto;
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      background-color: #fff;
+    }
+
+    .slider-track {
+      display: flex;
+      height: 100%;
+      transition: transform 1s ease;
+    }
+
+    .slide {
+      min-width: 100%;
+      height: 100%;
+    }
+
+    .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .prev, .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      font-size: 2em;
+      padding: 10px 15px;
+      cursor: pointer;
+      border-radius: 50%;
+      z-index: 10;
+      transition: background-color 0.3s ease;
+    }
+
+    .prev:hover, .next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .prev { left: 10px; }
+    .next { right: 10px; }
+
+    footer {
+      background-color: #004d40;
+      color: #fbc02d;
+      text-align: center;
+      padding: 1.5em 0;
+      margin-top: 2em;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Extracurricular</h1>
+    <nav>
+      <a href="Luqman.html">Home</a>
+      <a href="extracurricular.html">Extracurricular</a>
+      <a href="work.html">Work Experience</a>
+      <a href="hobby.html">My Hobbies</a>
+    </nav>
+  </header>
+
+  <section>
+    <h2>Gain Experience, Gain Knowledge</h2>
+    <p>Here are some moments from my extracurricular experiences, such as being part of the Student Representative Council (2023/2024).</p>
+  </section>
+
+  <section class="extracurricular">
+   <h3 class="slider-section-title">MPP's Thingy</h3>
+    <div class="slide-content">
+      <div class="slider-track" id="sliderTrack1">
+        <div class="slide"><img src="image/A1.jpeg" alt="Slide 1"></div>
+        <div class="slide"><img src="image/A2.jpeg" alt="Slide 2"></div>
+        <div class="slide"><img src="image/A3.jpeg" alt="Slide 3"></div>
+	<div class="slide"><img src="image/ABCD.jpeg" alt="Slide 4"></div>
+        <div class="slide"><img src="image/A4.jpeg" alt="Slide 5"></div>
+        <div class="slide"><img src="image/A5.jpeg" alt="Slide 6"></div>
+        <div class="slide"><img src="image/A6.jpeg" alt="Slide 7"></div>
+      </div>
+      <div class="prev" onclick="changeSlide('sliderTrack1', -1)">❮</div>
+      <div class="next" onclick="changeSlide('sliderTrack1', 1)">❯</div>
+    </div>
+  </section>
+
+  <section class="extracurricular">
+   <h4 class="slider-section-title">Parlimen Mahasiswa - Student's Parliament</h4>
+    <div class="slide-content">
+      <div class="slider-track" id="sliderTrack2">
+        <div class="slide"><img src="image/B1.jpeg" alt="Slide 1"></div>
+        <div class="slide"><img src="image/B2.jpeg" alt="Slide 2"></div>
+        <div class="slide"><img src="image/B3.jpeg" alt="Slide 3"></div>
+	<div class="slide"><img src="image/B4.jpeg" alt="Slide 4"></div>
+        <div class="slide"><img src="image/B5.jpeg" alt="Slide 5"></div>
+      </div>
+      <div class="prev" onclick="changeSlide('sliderTrack2', -1)">❮</div>
+      <div class="next" onclick="changeSlide('sliderTrack2', 1)">❯</div>
+    </div>
+  </section>
+
+  <section class="extracurricular">
+   <h5 class="slider-section-title">Program Leader "ClubFest"</h5>
+    <div class="slide-content">
+      <div class="slider-track" id="sliderTrack3">
+        <div class="slide"><img src="image/C1.jpeg" alt="Slide 1"></div>
+        <div class="slide"><img src="image/C2.jpeg" alt="Slide 2"></div>
+        <div class="slide"><img src="image/C3.jpeg" alt="Slide 3"></div>
+        <div class="slide"><img src="image/C4.jpg" alt="Slide 4"></div>
+        <div class="slide"><img src="image/C5.jpeg" alt="Slide 5"></div>
+        <div class="slide"><img src="image/C6.jpeg" alt="Slide 6"></div>
+      </div>
+      <div class="prev" onclick="changeSlide('sliderTrack3', -1)">❮</div>
+      <div class="next" onclick="changeSlide('sliderTrack3', 1)">❯</div>
+    </div>
+  </section>
+
+<section class="extracurricular">
+   <h5 class="slider-section-title">PM Luqman "MDS 2024"</h5>
+    <div class="slide-content">
+      <div class="slider-track" id="sliderTrack4">
+        <div class="slide"><img src="image/D1.jpeg" alt="Slide 1"></div>
+        <div class="slide"><img src="image/D2.jpeg" alt="Slide 2"></div>
+        <div class="slide"><img src="image/D3.jpeg" alt="Slide 3"></div>
+        <div class="slide"><img src="image/D4.jpeg" alt="Slide 4"></div>
+        <div class="slide"><img src="image/D5.jpeg" alt="Slide 5"></div>
+      </div>
+      <div class="prev" onclick="changeSlide('sliderTrack4', -1)">❮</div>
+      <div class="next" onclick="changeSlide('sliderTrack4', 1)">❯</div>
+    </div>
+  </section>
+
+<section class="extracurricular">
+   <h5 class="slider-section-title">SAF Contingent Leader</h5>
+    <div class="slide-content">
+      <div class="slider-track" id="sliderTrack5">
+        <div class="slide"><img src="image/E1.jpeg" alt="Slide 1"></div>
+        <div class="slide"><img src="image/E2.jpeg" alt="Slide 2"></div>
+      </div>
+      <div class="prev" onclick="changeSlide('sliderTrack5', -1)">❮</div>
+      <div class="next" onclick="changeSlide('sliderTrack5', 1)">❯</div>
+    </div>
+  </section>
+
+
+  <footer>
+    <p>&copy; 2025 mdluqman. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const sliders = {
+      sliderTrack1: 0,
+      sliderTrack2: 0,
+      sliderTrack3: 0,
+      sliderTrack4: 0,
+      sliderTrack5: 0
+    };
+
+    function changeSlide(trackId, direction) {
+      const sliderTrack = document.getElementById(trackId);
+      const totalSlides = sliderTrack.children.length;
+      sliders[trackId] += direction;
+
+      if (sliders[trackId] >= totalSlides) sliders[trackId] = 0;
+      if (sliders[trackId] < 0) sliders[trackId] = totalSlides - 1;
+
+      sliderTrack.style.transform = `translateX(-${sliders[trackId] * 100}%)`;
+    }
+
+    setInterval(() => changeSlide('sliderTrack1', 1), 5000);
+    setInterval(() => changeSlide('sliderTrack2', 1), 6000);
+    setInterval(() => changeSlide('sliderTrack3', 1), 5000);
+    setInterval(() => changeSlide('sliderTrack4', 1), 6000);
+    setInterval(() => changeSlide('sliderTrack5', 1), 5000);
+  </script>
+
+</body>
+</html>
